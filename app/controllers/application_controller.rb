@@ -16,7 +16,7 @@ class ApplicationController < Sinatra::Base
 
   patch "/recipes/:id/edit" do
   @recipe = Recipe.update
-  redirect to "/recipes/:id"
+  erb :show
   end
 
   get '/recipes/new' do
